@@ -25,3 +25,13 @@ let estado: EstadoAplicacao = {
   ],
   tarefaSelecionada: null,
 };
+
+const selecionarTarefa = (
+  estado: EstadoAplicacao,
+  tarefa: Tarefa
+): EstadoAplicacao => {
+  return {
+    ...estado,
+    tarefaSelecionada: tarefa === estado.tarefaSelecionada ? null : tarefa,
+  };
+};
